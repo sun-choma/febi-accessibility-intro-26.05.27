@@ -59,7 +59,7 @@ layout: default
   パワーユーザーも、エンジニアもここで生きている。ユーザーだって同じはず。
 </div>
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-2 gap-8 mt-4">
 
 <div>
   <KeyboardDemo />
@@ -91,10 +91,10 @@ layout: default
 
 <div class="mt-6 grid grid-cols-4 gap-3 text-sm">
   <div class="rounded-md bg-gray-800 px-3 py-2">
-    <kbd>Tab</kbd> — フィールド/ボタン間を移動
+    <kbd>Tab</kbd> — ボタン間を移動
   </div>
   <div class="rounded-md bg-gray-800 px-3 py-2">
-    <kbd>↑</kbd> <kbd>↓</kbd> — ラジオボタンを選択
+    <kbd>↑</kbd> <kbd>↓</kbd> — ラジオを選択
   </div>
   <div class="rounded-md bg-gray-800 px-3 py-2">
     <kbd>Enter</kbd> — 実行 / 送信
@@ -105,8 +105,8 @@ layout: default
 </div>
 
 <div v-click class="mt-6 text-center text-sm opacity-70">
-  <code>&lt;dialog&gt;</code> は <a href="LINK_TO_FEBI_CSS_DECK" target="_blank" class="underline">前回のスライド</a> で詳しく取り上げた。
   これらすべてがネイティブ機能で、JS のキーボード処理は一切不要。
+  <code>&lt;dialog&gt;</code> は <a href="https://sun-choma.github.io/febi-modern-css-26.04.15/20" target="_blank" class="underline">前回のスライド</a> で詳しく取り上げた。
 </div>
 
 ---
