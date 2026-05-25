@@ -16,7 +16,7 @@ src: ./slides/what-and-why.md
 layout: section
 ---
 
-# a11x は UX でもある ⌨️
+# a11y は UX でもある ⌨️
 
 <div class="mt-8 text-xl opacity-70 text-center max-w-3xl mx-auto">
   じゃあ、どう解決するのか? 大半は <em>追加の</em> 仕事ではなく、<em>別のやり方の</em> 仕事だ。
