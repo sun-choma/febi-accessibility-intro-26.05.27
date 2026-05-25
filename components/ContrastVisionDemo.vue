@@ -17,20 +17,20 @@ const cvd = ref<CVD>('normal')
 const blurLevel = ref<BlurLevel>(0)
 
 const cvdOptions = [
-  { value: 'normal' as const, label: 'Normal' },
-  { value: 'deuteranomaly' as const, label: 'Deuteranomaly' },
-  { value: 'deuteranopia' as const, label: 'Deuteranopia' },
-  { value: 'protanomaly' as const, label: 'Protanomaly' },
-  { value: 'protanopia' as const, label: 'Protanopia' },
-  { value: 'tritanopia' as const, label: 'Tritanopia' },
-  { value: 'achromatopsia' as const, label: 'Achromatopsia' },
+  { value: 'normal' as const, label: '正常' },
+  { value: 'deuteranomaly' as const, label: '2型3色覚' },
+  { value: 'deuteranopia' as const, label: '2型2色覚' },
+  { value: 'protanomaly' as const, label: '1型3色覚' },
+  { value: 'protanopia' as const, label: '1型2色覚' },
+  { value: 'tritanopia' as const, label: '3型2色覚' },
+  { value: 'achromatopsia' as const, label: '全色盲' },
 ]
 
 const blurOptions = [
-  { value: 0 as const, label: 'None' },
-  { value: 1 as const, label: 'Light' },
-  { value: 2 as const, label: 'Medium' },
-  { value: 4 as const, label: 'Heavy' },
+  { value: 0 as const, label: 'なし' },
+  { value: 1 as const, label: '弱' },
+  { value: 2 as const, label: '中' },
+  { value: 4 as const, label: '強' },
 ]
 
 // CVD matrices from @storybook/addon-a11y (ColorFilters.tsx).
@@ -65,18 +65,18 @@ const filter = computed(() => {
       <div class="samples" :style="{ filter }">
         <div class="texts">
           <div class="sample">
-            <div class="label">Passing — 4.5:1</div>
+            <div class="label">合格 — 4.5:1</div>
             <p class="body-text pass">
-              Confirm your shipping address before submitting the order.
-              You can edit it later from your account settings.
+              注文を確定する前に、配送先の住所をご確認ください。
+              アカウント設定からあとで変更することもできます。
             </p>
           </div>
 
           <div class="sample">
-            <div class="label">Failing — 2.15:1</div>
+            <div class="label">不合格 — 2.15:1</div>
             <p class="body-text fail">
-              Confirm your shipping address before submitting the order.
-              You can edit it later from your account settings.
+              注文を確定する前に、配送先の住所をご確認ください。
+              アカウント設定からあとで変更することもできます。
             </p>
           </div>
         </div>
@@ -84,10 +84,10 @@ const filter = computed(() => {
         <hr class="divider" />
 
         <div class="badges">
-          <span class="badge" style="background: #22c55e">Paid</span>
-          <span class="badge" style="background: #f59e0b">Pending</span>
-          <span class="badge" style="background: #ef4444">Failed</span>
-          <span class="badge" style="background: #3b82f6">Refunded</span>
+          <span class="badge" style="background: #22c55e">支払済</span>
+          <span class="badge" style="background: #f59e0b">保留中</span>
+          <span class="badge" style="background: #ef4444">失敗</span>
+          <span class="badge" style="background: #3b82f6">返金済</span>
         </div>
       </div>
     </div>
@@ -96,13 +96,13 @@ const filter = computed(() => {
       <SegmentedSwitch
           v-model="cvd"
           :options="cvdOptions"
-          aria-label="Color vision deficiency"
+          aria-label="色覚特性"
       />
 
       <SegmentedSwitch
           v-model="blurLevel"
           :options="blurOptions"
-          aria-label="Blur level"
+          aria-label="ぼかしレベル"
       />
     </div>
   </div>

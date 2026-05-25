@@ -8,12 +8,12 @@ const value = ref('')
   <div class="placeholder-demo">
     <input
         type="text"
-        placeholder="IBAN: ex. BE71 0961 2345 6769"
+        placeholder="IBAN: 例 BE71 0961 2345 6769"
         v-model="value"
         class="demo-input"
     />
     <div class="hint">
-      <lucide-arrow-up class="inline" /> Try typing — was it 4-char groups? With spaces? Where's the country code go?
+      <lucide-arrow-up class="inline" /> 入力してみよう — 4文字区切りだっけ?スペース入れる?国コードはどこ?
     </div>
   </div>
 </template>

@@ -2,10 +2,10 @@
 layout: default
 ---
 
-# Tools that do the legwork
+# 手間を肩代わりしてくれるツール
 
 <div class="text-base opacity-70 mt-2">
-  Layered — each tool catches things the others miss.
+  レイヤー構造 — それぞれが他のツールでは見逃すものを拾う。
 </div>
 
 <div class="grid grid-cols-3 gap-4 mt-8">
@@ -13,10 +13,10 @@ layout: default
 <div class="rounded-lg border border-gray-700 p-4">
   <div class="flex items-center gap-2 mb-2">
     <logos-eslint class="text-2xl" />
-    <span class="font-semibold">ESLint plugins</span>
+    <span class="font-semibold">ESLint プラグイン</span>
   </div>
   <div class="text-sm opacity-80 leading-relaxed">
-    Catches issues <em>as you type</em>. Missing alt text, bad ARIA, unlabeled controls.
+    <em>書いている最中に</em> 問題を検出。alt 不足、不適切な ARIA、ラベルのないコントロールなど。
   </div>
   <div class="text-xs opacity-50 mt-2 font-mono">
     eslint-plugin-jsx-a11y · eslint-plugin-vuejs-accessibility
@@ -29,14 +29,14 @@ layout: default
     <span class="font-semibold">axe DevTools</span>
   </div>
   <div class="text-sm opacity-80 leading-relaxed">
-    Free browser extension. Scans rendered pages. Catches ~57%* of WCAG issues on average.
+    無料のブラウザ拡張。レンダリング後のページをスキャン。WCAG 課題の平均約 57%* を検出。
   </div>
   <div class="text-xs opacity-50 mt-2">
-    * According to Deque's 2021 study of ~300k issues across 13,000 pages
+    * Deque による 2021 年の調査(13,000 ページ・約 30 万件の課題)
   </div>
   <div class="text-xs opacity-50 mt-2">
     <a href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" target="_blank">
-      Install for Chrome
+      Chrome 拡張をインストール
     </a>
   </div>
 </div>
@@ -47,35 +47,34 @@ layout: default
     <span class="font-semibold">Lighthouse</span>
   </div>
   <div class="text-sm opacity-80 leading-relaxed">
-    Built into Chrome DevTools. A11y + SEO + perf in one pass. Uses axe-core under the hood.
+    Chrome DevTools に標準搭載。アクセシビリティ + SEO + パフォーマンスを一度に。内部では axe-core を使用。
   </div>
   <div class="text-xs opacity-50 mt-2">
-    DevTools → Lighthouse tab
+    DevTools → Lighthouse タブ
   </div>
 </div>
 
 </div>
 
 <div v-click class="mt-8 text-sm opacity-60 text-center">
-  Honorable mention: <a href="https://storybook.js.org/addons/@storybook/addon-a11y" target="_blank"><strong>Storybook a11y addon</strong></a> — same axe engine, runs per component.
+  おまけ: <a href="https://storybook.js.org/addons/@storybook/addon-a11y" target="_blank"><strong>Storybook a11y addon</strong></a> — 同じ axe エンジン、コンポーネント単位で実行。
 </div>
-
 
 ---
 layout: default
 transition: slide-up
 ---
 
-# Labels that say nothing
+# 何も言わないラベル
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-green-400 mb-2">
-    <lucide-check class="inline" /> What the tool checks
+    <lucide-check class="inline" /> ツールがチェックすること
   </div>
 
-  <div class="text-sm opacity-70 mb-3">Rule: every interactive element must have an accessible name.</div>
+  <div class="text-sm opacity-70 mb-3">ルール: 操作可能な要素にはアクセシブルな名前が必須。</div>
 
 ```html
 <button aria-label="button">
@@ -86,30 +85,30 @@ transition: slide-up
 ```
 
   <div class="text-xs opacity-60 mt-3">
-    Names exist → passes the audit.
+    名前が存在する → 監査をパス。
   </div>
 </div>
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-red-400 mb-2">
-    <lucide-x class="inline" /> What actually happens
+    <lucide-x class="inline" /> 実際に起きていること
   </div>
 
 <div class="rounded-lg border border-gray-700 p-4 mt-2 bg-gray-900 font-mono text-sm">
-  <div class="opacity-60">Screen reader output:</div>
-  <div class="mt-2"><lucide-volume-2 class="inline text-pink-400" /> "button, button"</div>
-  <div class="mt-1"><lucide-volume-2 class="inline text-pink-400" /> "image, image"</div>
+  <div class="opacity-60">スクリーンリーダーの読み上げ:</div>
+  <div class="mt-2"><lucide-volume-2 class="inline text-pink-400" /> 「ボタン、ボタン」</div>
+  <div class="mt-1"><lucide-volume-2 class="inline text-pink-400" /> 「画像、画像」</div>
 </div>
 
   <div class="text-xs opacity-60 mt-3">
-    User has no idea <em>what</em> the button does or <em>what</em> the image shows.
+    ユーザーには、ボタンの <em>役割</em> も、画像の <em>内容</em> もわからない。
   </div>
 </div>
 
 </div>
 
 <div v-click class="mt-8 text-center text-base opacity-80">
-  A label only helps if it <strong>describes the thing</strong>.
+  ラベルは <strong>そのものを説明している時にだけ</strong> 役に立つ。
 </div>
 
 ---
@@ -117,45 +116,45 @@ layout: default
 transition: slide-up
 ---
 
-# Placeholder is not a label
+# プレースホルダーはラベルではない
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-green-400 mb-2">
-    <lucide-check class="inline" /> What the tool checks
+    <lucide-check class="inline" /> ツールがチェックすること
   </div>
 
-  <div class="text-sm opacity-70 mb-3">Rule: input has an accessible name from <em>some</em> source.</div>
+  <div class="text-sm opacity-70 mb-3">ルール: <em>何らかの</em> ソースからアクセシブルな名前を取得できる。</div>
 
 ```html
 <input
   type="text"
-  placeholder="IBAN: ex. BE71 0961 2345 6769"
+  placeholder="IBAN: 例 BE71 0961 2345 6769"
 />
 ```
 
   <div class="text-xs opacity-60 mt-3">
-    Placeholder counts as a name → passes (with some configs).
+    プレースホルダーが名前として認識される → パス(設定による)。
   </div>
 </div>
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-red-400 mb-2">
-    <lucide-x class="inline" /> What actually happens
+    <lucide-x class="inline" /> 実際に起きていること
   </div>
 
   <PlaceholderDemo class="mt-2" />
 
   <div class="text-xs opacity-60 mt-3">
-    The "label" disappears the moment the user starts typing.
+    入力を始めた瞬間に「ラベル」が消える。
   </div>
 </div>
 
 </div>
 
 <div v-click class="mt-8 text-center text-base opacity-80">
-  Labels stay. Placeholders are <strong>hints</strong>, not labels.
+  ラベルは残る。プレースホルダーは <strong>ヒント</strong> であって、ラベルではない。
 </div>
 
 ---
@@ -163,16 +162,16 @@ layout: default
 transition: slide-up
 ---
 
-# Color-only meaning
+# 色だけが意味を持つ
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-green-400 mb-2">
-    <lucide-check class="inline" /> What the tool checks
+    <lucide-check class="inline" /> ツールがチェックすること
   </div>
 
-  <div class="text-sm opacity-70 mb-3">Rule: required state is exposed via ARIA / native attributes.</div>
+  <div class="text-sm opacity-70 mb-3">ルール: 必須状態が ARIA またはネイティブ属性で表現されている。</div>
 
 ```html
 <input
@@ -189,85 +188,85 @@ transition: slide-up
 ```
 
   <div class="text-xs opacity-60 mt-3">
-    State is in the markup → passes the audit.
+    マークアップに状態が存在する → 監査をパス。
   </div>
 </div>
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-red-400 mb-2">
-    <lucide-x class="inline" /> What actually happens
+    <lucide-x class="inline" /> 実際に起きていること
   </div>
 
   <ColorOnlyDemo class="mt-2" />
 
   <div class="text-xs opacity-60 mt-3">
-    With CVD or grayscale, all fields look identical — no way to tell which is required.
+    色覚特性やグレースケールでは全てのフィールドが同じに見える — どれが必須かわからない。
   </div>
 </div>
 
 </div>
 
 <div v-click class="mt-8 text-center text-base opacity-80">
-  Color is a <em>second</em> signal. There must be a <strong>first one</strong> too.
+  色は <em>2番目の</em> シグナル。<strong>1番目のシグナル</strong> が別に必要。
 </div>
 
 ---
 layout: default
 ---
 
-# Where did focus go?
+# フォーカスはどこへ?
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-green-400 mb-2">
-    <lucide-check class="inline" /> What the tool checks
+    <lucide-check class="inline" /> ツールがチェックすること
   </div>
 
-  <div class="text-sm opacity-70 mb-3">Rule: <code>:focus</code> styles are defined.</div>
+  <div class="text-sm opacity-70 mb-3">ルール: <code>:focus</code> のスタイルが定義されている。</div>
 
 ```css
 .btn:focus {
   outline: none;
 }
 
-/* or "reset" CSS */
+/* または "リセット" CSS */
 button {
   outline: 0;
 }
 ```
 
   <div class="text-xs opacity-60 mt-3">
-    CSS rule exists → passes the audit.
+    CSS ルールが存在する → 監査をパス。
   </div>
 </div>
 
 <div>
   <div class="text-xs font-mono uppercase tracking-wider text-red-400 mb-2">
-    <lucide-x class="inline" /> What actually happens
+    <lucide-x class="inline" /> 実際に起きていること
   </div>
 
   <FocusDemo class="mt-2" />
 
   <div class="text-xs opacity-60 mt-3">
-    Tab through — keyboard users have <em>no idea</em> where they are.
+    Tab で移動してみよう — キーボードユーザーは自分の位置が <em>全くわからない</em>。
   </div>
 </div>
 
 </div>
 
 <div v-click class="mt-8 text-center text-base opacity-80">
-  Focus is the keyboard user's <strong>cursor</strong>.
+  フォーカスはキーボードユーザーの <strong>カーソル</strong> だ。
 </div>
 
 ---
 layout: default
 ---
 
-# A starter checklist
+# スターターチェックリスト
 
 <div class="text-base opacity-70 text-sm">
-  You don't need to know every rule from day one. Be aware of these things — and lean on the tools when in doubt.
+  最初から全てのルールを覚える必要はない。これらを意識しつつ、迷ったらツールに頼ろう。
 </div>
 
 <Checklist />

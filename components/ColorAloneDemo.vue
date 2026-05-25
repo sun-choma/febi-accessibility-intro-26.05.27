@@ -14,13 +14,13 @@ type CVD =
 const cvd = ref<CVD>('normal')
 
 const cvdOptions = [
-  { value: 'normal' as const, label: 'Normal' },
-  { value: 'deuteranomaly' as const, label: 'Deuteranomaly' },
-  { value: 'deuteranopia' as const, label: 'Deuteranopia' },
-  { value: 'protanomaly' as const, label: 'Protanomaly' },
-  { value: 'protanopia' as const, label: 'Protanopia' },
-  { value: 'tritanopia' as const, label: 'Tritanopia' },
-  { value: 'achromatopsia' as const, label: 'Achromatopsia' },
+  { value: 'normal' as const, label: '正常' },
+  { value: 'deuteranomaly' as const, label: '2型3色覚' },
+  { value: 'deuteranopia' as const, label: '2型2色覚' },
+  { value: 'protanomaly' as const, label: '1型3色覚' },
+  { value: 'protanopia' as const, label: '1型2色覚' },
+  { value: 'tritanopia' as const, label: '3型2色覚' },
+  { value: 'achromatopsia' as const, label: '全色盲' },
 ]
 
 const cvdFilters: Record<CVD, string> = {
@@ -46,29 +46,29 @@ const filter = computed(() => cvdFilters[cvd.value] || 'none')
   <div class="color-alone-demo">
     <div class="panels" :style="{ filter }">
       <div class="panel">
-        <div class="panel-label bad">Color only</div>
+        <div class="panel-label bad">色だけ</div>
         <div class="badges">
-          <span class="badge-solid" style="background: #22c55e">Paid</span>
-          <span class="badge-solid" style="background: #f59e0b">Pending</span>
-          <span class="badge-solid" style="background: #ef4444">Failed</span>
-          <span class="badge-solid" style="background: #3b82f6">Refunded</span>
+          <span class="badge-solid" style="background: #22c55e">支払済</span>
+          <span class="badge-solid" style="background: #f59e0b">保留中</span>
+          <span class="badge-solid" style="background: #ef4444">失敗</span>
+          <span class="badge-solid" style="background: #3b82f6">返金済</span>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-label good">Color + icon + shape</div>
+        <div class="panel-label good">色 + アイコン + 形</div>
         <div class="badges">
           <span class="badge-soft" style="--c: #22c55e">
-            <lucide-check-circle-2 /> Paid
+            <lucide-check-circle-2 /> 支払済
           </span>
           <span class="badge-outline" style="--c: #f59e0b">
-            <lucide-clock /> Pending
+            <lucide-clock /> 保留中
           </span>
           <span class="badge-solid-icon" style="background: #ef4444">
-            <lucide-x-circle /> Failed
+            <lucide-x-circle /> 失敗
           </span>
           <span class="badge-ghost" style="--c: #3b82f6">
-            <lucide-undo-2 /> Refunded
+            <lucide-undo-2 /> 返金済
           </span>
         </div>
       </div>
@@ -77,7 +77,7 @@ const filter = computed(() => cvdFilters[cvd.value] || 'none')
     <SegmentedSwitch
         v-model="cvd"
         :options="cvdOptions"
-        aria-label="Color vision deficiency"
+        aria-label="色覚特性"
     />
   </div>
 </template>

@@ -4,10 +4,10 @@ import { ref } from 'vue'
 const grayscale = ref(false)
 
 const orders = [
-  { id: '#1042', customer: 'Tanaka K.', status: 'Paid', color: '#22c55e' },
-  { id: '#1043', customer: 'Nguyễn T.', status: 'Pending', color: '#f59e0b' },
-  { id: '#1044', customer: 'Watanabe Y.', status: 'Failed', color: '#ef4444' },
-  { id: '#1045', customer: 'Trần H.', status: 'Refunded', color: '#3b82f6' },
+  { id: '#1042', customer: 'Tanaka K.', status: '支払済', color: '#22c55e' },
+  { id: '#1043', customer: 'Nguyễn T.', status: '保留中', color: '#f59e0b' },
+  { id: '#1044', customer: 'Watanabe Y.', status: '失敗', color: '#ef4444' },
+  { id: '#1045', customer: 'Trần H.', status: '返金済', color: '#3b82f6' },
 ]
 </script>
 
@@ -31,7 +31,7 @@ const orders = [
       <span class="toggle-track">
         <span class="toggle-thumb" />
       </span>
-      <span class="toggle-label">Grayscale</span>
+      <span class="toggle-label">グレースケール</span>
     </label>
   </div>
 </template>

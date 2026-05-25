@@ -1,25 +1,25 @@
 <template>
   <div class="focus-demo">
     <div class="row">
-      <div class="row-label">Bad</div>
+      <div class="row-label">NG</div>
       <div class="buttons bad">
-        <button class="demo-btn">One</button>
-        <button class="demo-btn">Two</button>
-        <button class="demo-btn">Three</button>
+        <button class="demo-btn">1</button>
+        <button class="demo-btn">2</button>
+        <button class="demo-btn">3</button>
       </div>
     </div>
 
     <div class="row">
-      <div class="row-label">Good</div>
+      <div class="row-label">OK</div>
       <div class="buttons good">
-        <button class="demo-btn">One</button>
-        <button class="demo-btn">Two</button>
-        <button class="demo-btn">Three</button>
+        <button class="demo-btn">1</button>
+        <button class="demo-btn">2</button>
+        <button class="demo-btn">3</button>
       </div>
     </div>
 
     <div class="hint">
-      <lucide-arrow-up class="inline" /> Tab into each row — feel the difference
+      <lucide-arrow-up class="inline" /> 各行に Tab で移動 — 違いを実感
     </div>
   </div>
 </template>

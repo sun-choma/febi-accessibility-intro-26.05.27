@@ -1,41 +1,40 @@
 <template>
   <div class="labels-demo">
-    <!-- Inputs -->
-    <div class="row-label">Inputs</div>
+    <div class="row-label">入力フィールド</div>
 
     <div class="demo-panel bad">
-      <div class="panel-label">Bad</div>
+      <div class="panel-label">NG</div>
       <input type="email" class="demo-input" />
     </div>
 
     <div class="demo-panel good">
-      <div class="panel-label">Good</div>
+      <div class="panel-label">OK</div>
       <label for="lbl-email" class="demo-label">Email</label>
       <input id="lbl-email" type="email" class="demo-input" />
     </div>
 
     <!-- Icon buttons -->
-    <div class="row-label">Icon buttons</div>
+    <div class="row-label">アイコンボタン</div>
 
     <div class="demo-panel bad">
-      <div class="panel-label">Bad</div>
+      <div class="panel-label">NG</div>
       <button class="demo-icon-btn">
         <lucide-x />
       </button>
     </div>
 
     <div class="demo-panel good">
-      <div class="panel-label">Good</div>
-      <button class="demo-icon-btn" aria-label="Close dialog">
+      <div class="panel-label">OK</div>
+      <button class="demo-icon-btn" aria-label="ダイアログを閉じる">
         <lucide-x />
       </button>
     </div>
 
     <!-- Form errors -->
-    <div class="row-label">Form errors</div>
+    <div class="row-label">フォームエラー</div>
 
     <div class="demo-panel bad">
-      <div class="panel-label">Bad</div>
+      <div class="panel-label">NG</div>
       <label for="lbl-err-bad" class="demo-label">Email</label>
       <input
           id="lbl-err-bad"
@@ -44,11 +43,11 @@
           aria-invalid="true"
           value="not-an-email"
       />
-      <p class="demo-error">Must be a valid email.</p>
+      <p class="demo-error">有効なメールアドレスを入力してください。</p>
     </div>
 
     <div class="demo-panel good">
-      <div class="panel-label">Good</div>
+      <div class="panel-label">OK</div>
       <label for="lbl-err-good" class="demo-label">Email</label>
       <input
           id="lbl-err-good"
@@ -58,7 +57,7 @@
           aria-describedby="lbl-err-good-msg"
           value="not-an-email"
       />
-      <p id="lbl-err-good-msg" class="demo-error">Must be a valid email.</p>
+      <p id="lbl-err-good-msg" class="demo-error">有効なメールアドレスを入力してください。</p>
     </div>
   </div>
 </template>

@@ -3,28 +3,28 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    title: 'Tab through the page',
-    detail: 'Can you reach everything? Is focus visible? Does the order make sense?',
+    title: 'Tab でページを移動する',
+    detail: '全ての要素にたどり着けるか?フォーカスは見えているか?順序は自然か?',
     checked: false,
   },
   {
-    title: 'Zoom to 200%',
-    detail: 'Does the layout still work? Anything cut off or overlapping?',
+    title: '200% にズーム',
+    detail: 'レイアウトは崩れないか?切れたり重なったりしていないか?',
     checked: false,
   },
   {
-    title: 'Toggle grayscale / vision emulation',
-    detail: 'DevTools → Rendering → Emulate vision deficiencies. Anything carried only by color?',
+    title: 'グレースケール / 色覚エミュレーションを切り替える',
+    detail: 'DevTools → Rendering → 色覚異常をエミュレート。色だけで意味を伝えている箇所はないか?',
     checked: false,
   },
   {
-    title: 'Run Lighthouse / axe',
-    detail: 'DevTools → Lighthouse → Accessibility. Fix what it flags before merging.',
+    title: 'Lighthouse / axe を走らせる',
+    detail: 'DevTools → Lighthouse → Accessibility。指摘された箇所は merge 前に修正。',
     checked: false,
   },
   {
-    title: 'Try a screen reader on the critical flow',
-    detail: 'VoiceOver: Cmd+F5. Does it announce what matters? Focus on form / checkout / search.',
+    title: 'クリティカルなフローでスクリーンリーダーを試す',
+    detail: 'VoiceOver: Cmd+F5。重要な内容を読み上げるか?フォーム・チェックアウト・検索を中心に。',
     checked: false,
   },
 ])

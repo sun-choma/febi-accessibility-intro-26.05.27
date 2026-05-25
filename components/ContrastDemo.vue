@@ -14,7 +14,7 @@ const examples = [
         class="sample"
         :style="{ color: ex.fg }"
     >
-      <span class="text">The quick brown fox</span>
+      <span class="text">いろはにほへと ちりぬるを</span>
       <span class="ratio" :class="{ fail: !ex.pass }">
         {{ ex.ratio.toFixed(2) }}:1
         <span class="badge">{{ ex.pass ? '✓ AA' : '✗ AA' }}</span>

@@ -4,9 +4,9 @@ title: Web for All
 transition: slide-left
 ---
 
-# ♿ Web for All 
+# ♿ Web for All
 
-Intro to accessibility 
+アクセシビリティ入門
 
 ---
 src: ./slides/what-and-why.md
@@ -16,10 +16,10 @@ src: ./slides/what-and-why.md
 layout: section
 ---
 
-# Accessibility is also UX ⌨️
+# a11x は UX でもある ⌨️
 
 <div class="mt-8 text-xl opacity-70 text-center max-w-3xl mx-auto">
-  So how do we actually fix this? Most of it isn't <em>extra</em> work — it's <em>different</em> work.
+  じゃあ、どう解決するのか? 大半は <em>追加の</em> 仕事ではなく、<em>別のやり方の</em> 仕事だ。
 </div>
 
 ---
@@ -30,7 +30,7 @@ src: ./slides/a11y-is-ux.md
 layout: section
 ---
 
-# The accessibility audit 🔍
+# アクセシビリティの監査 🔍
 
 ---
 src: ./slides/tools-to-leverage.md
@@ -40,7 +40,7 @@ src: ./slides/tools-to-leverage.md
 layout: center
 ---
 
-# Build the web for everyone 🤝‍
+# みんなのための Web を作ろう 🤝
 
 <div class="mt-8 flex flex-wrap gap-4 justify-center text-sm">
   <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" class="resource">

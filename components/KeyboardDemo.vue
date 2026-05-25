@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref, useTemplateRef} from 'vue'
+import {useTemplateRef} from 'vue'
 
 const dialog = useTemplateRef<HTMLDialogElement>('dialog')
 
@@ -11,23 +11,23 @@ function open() {
 <template>
   <div class="keyboard-demo">
     <button class="trigger" @click="open">
-      Open dialog
+      ダイアログを開く
     </button>
 
     <dialog ref="dialog" class="modal">
       <form method="dialog">
-        <h2>Delivery option</h2>
+        <h2>配送オプション</h2>
 
         <fieldset>
-          <legend>Speed</legend>
-          <label><input type="radio" name="speed" value="standard" checked/> Standard</label>
-          <label><input type="radio" name="speed" value="express"/> Express</label>
-          <label><input type="radio" name="speed" value="overnight"/> Overnight</label>
+          <legend>速度</legend>
+          <label><input type="radio" name="speed" value="standard" checked/> 通常</label>
+          <label><input type="radio" name="speed" value="express"/> 速達</label>
+          <label><input type="radio" name="speed" value="overnight"/> 翌日配送</label>
         </fieldset>
 
         <div class="actions">
-          <button value="cancel">Cancel</button>
-          <button value="confirm" class="primary">Confirm</button>
+          <button value="cancel">キャンセル</button>
+          <button value="confirm" class="primary">確定</button>
         </div>
       </form>
     </dialog>

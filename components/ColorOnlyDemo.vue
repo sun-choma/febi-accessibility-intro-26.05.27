@@ -10,10 +10,10 @@ const grayscale = ref(false)
         class="form-group"
         :class="{ 'is-grayscale': grayscale }"
     >
-      <input type="text" placeholder="Name" class="demo-input" />
-      <input type="text" placeholder="Company" class="demo-input required" />
-      <input type="text" placeholder="Email" class="demo-input required" />
-      <input type="text" placeholder="Notes" class="demo-input" />
+      <input type="text" placeholder="名前" class="demo-input" />
+      <input type="text" placeholder="会社" class="demo-input required" />
+      <input type="text" placeholder="メールアドレス" class="demo-input required" />
+      <input type="text" placeholder="メモ" class="demo-input" />
     </div>
 
     <label class="toggle">
@@ -21,7 +21,7 @@ const grayscale = ref(false)
       <span class="toggle-track">
         <span class="toggle-thumb" />
       </span>
-      <span>Grayscale</span>
+      <span>グレースケール</span>
     </label>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import {ref} from 'vue'
 
 const fakeChecked = ref(false)
 const realChecked = ref(false)
@@ -20,24 +20,24 @@ function toggleFake() {
         @click="toggleFake"
     >
       <span class="fake-cb-box">
-        <lucide-check v-if="fakeChecked" class="check" />
+        <lucide-check v-if="fakeChecked" class="check"/>
       </span>
-      Bad
+      NG
     </div>
 
     <!-- Native -->
     <label class="real-cb">
-      <input type="checkbox" v-model="realChecked" />
-      Native
+      <input type="checkbox" v-model="realChecked"/>
+      ネイティブ
     </label>
 
     <!-- Good: hidden native input + styled box -->
     <label class="good-cb">
-      <input type="checkbox" v-model="goodChecked" class="sr-only" />
+      <input type="checkbox" v-model="goodChecked" class="sr-only"/>
       <span class="good-cb-box" aria-hidden="true">
-        <lucide-check v-if="goodChecked" class="check" />
+        <lucide-check v-if="goodChecked" class="check"/>
       </span>
-      Good
+      OK
     </label>
   </div>
 </template>
