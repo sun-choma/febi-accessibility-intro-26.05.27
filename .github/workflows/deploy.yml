@@ -30,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Build Slidev
-        run: npx slidev build --base /febi-accessibility-26.05.27/
+        run: npx slidev build --base /febi-accessibility-intro-26.05.27/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
