@@ -65,7 +65,7 @@ const filter = computed(() => {
       <div class="samples" :style="{ filter }">
         <div class="texts">
           <div class="sample">
-            <div class="label">合格 — 4.5:1</div>
+            <div class="label">合格 — 13.35:1</div>
             <p class="body-text pass">
               注文を確定する前に、配送先の住所をご確認ください。
               アカウント設定からあとで変更することもできます。
